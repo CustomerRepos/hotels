@@ -1,24 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ContosoWF1
+  name: ContosoWS
   labels:
-    app: ContosoWF1
+    app: ContosoWS
     kubernetes.azure.com/generator: devhub
-  namespace: namespace-workflow-1723157608918
+  namespace: namespace-workflow-1723159980629
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: ContosoWF1
+      app: ContosoWS
   template:
     metadata:
       labels:
-        app: ContosoWF1
+        app: ContosoWS
     spec:
       containers:
-        - name: ContosoWF1
-          image: acrworkflow1723157608918.azurecr.io/image-workflow-1723157608918:latest
+        - name: ContosoWS
+          image: acrworkflow1723159980629.azurecr.io/image-workflow-1723159980629:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8000
