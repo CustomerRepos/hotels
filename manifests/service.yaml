@@ -1,14 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: ContosoWF1
-  namespace: namespace-workflow-1723157608918
+  name: ContosoWS
+  namespace: namespace-workflow-1723159980629
   labels:
     kubernetes.azure.com/generator: devhub
 spec:
   type: LoadBalancer
   selector:
-    app: ContosoWF1
+    app: ContosoWS
   ports:
     - protocol: TCP
       port: 8000
